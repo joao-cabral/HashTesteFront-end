@@ -1,4 +1,7 @@
 $primeryColor: #F2F2F2;
+$colorContentResultsTitle: #3D75BB;
+$colorInputAndResultsAndBar: #5D9CEC;
+$colorFontForm: #656565;
 
 *{
    margin: 0;
@@ -58,12 +61,13 @@ main{
    }
 
    input[type=text]:focus{
-      border-color: #5D9CEC;
+      border-color: $colorInputAndResultsAndBar;
    }
 
    .form-label{
       display: inline-block;
       margin-top: 26px;
+      color: $colorFontForm;
    }
 
    #about-input{
@@ -82,7 +86,26 @@ main{
    max-width: 231px;
    background-color: $primeryColor;
    
-   .box-results{
+   h4{
+      color: $colorContentResultsTitle;
+      padding-bottom: 5px;
+   }
 
+   p{
+      color: $colorInputAndResultsAndBar;
+   }
+
+   hr {
+      border-top: 1px solid $colorInputAndResultsAndBar;
+      width: 160px;
+      padding-bottom: 50px;
+      margin-left: 15px;
+  }
+
+   .box-results{
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      height: 190px;
    }
 }
